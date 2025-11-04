@@ -3,220 +3,157 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>La Revolución de la Megadosis – Vitamina D3</title>
-  <meta name="description" content="Educación y bienestar sobre la vitamina del sol. Una toma al mes × 3 para mantener tu piel, energía y bienestar en equilibrio.">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="La Revolución de la Megadosis – Vitamina D3">
-  <meta property="og:description" content="Una toma al mes × 3 para mantener tu piel, energía y bienestar en equilibrio.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1607779097040-26b7c0e2f6d1?q=80&w=1200&auto=format&fit=crop">
-  <meta property="og:url" content="https://vitaminad3-revolucion.github.io/">
+  <title>Vitamina D3 y Belleza Natural – Revolución de la Megadosis</title>
+  <meta name="description" content="Descubre cómo la Vitamina D3 apoya la belleza de tu piel, tu energía y bienestar interior. Una dosis de sol que empieza por dentro.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --green-900:#1F4732;     /* títulos / botón médico */
-      --green-600:#5B7861;     /* subtítulos */
-      --gold-500:#C9A34E;      /* botón ordenar */
-      --text-900:#333333;      /* cuerpo */
-      --bg:#ffffff;            /* fondo */
-      --muted:#f6f7f6;         /* bloques */
+    :root {
+      --gold:#d7b46a;
+      --sand:#f6f3ee;
+      --terracotta:#e6c8a5;
+      --text:#333;
+      --accent:#b07d41;
+      --white:#fff;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text-900);font-family:Lato,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6}
-    img{max-width:100%;display:block}
-    h1,h2,h3{font-family:Montserrat,Arial,sans-serif;color:var(--green-900);line-height:1.2;margin:0 0 .4rem}
-    h1{font-weight:800;font-size:clamp(2rem,4vw,3rem)}
-    h2{font-weight:700;font-size:clamp(1.3rem,2.4vw,1.8rem)}
-    p{margin:.4rem 0 1rem}
-    a{text-decoration:none}
-
-    /* Layout */
-    .container{width:min(1120px,92%);margin-inline:auto}
-    .grid-3{display:grid;gap:1.2rem;grid-template-columns:repeat(3,1fr)}
-    @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
-    .section{padding:64px 0}
-    .muted{background:var(--muted)}
-
-    /* Hero */
-    .hero{
-      display:grid;gap:2rem;align-items:center;
-      grid-template-columns:1.1fr .9fr;min-height:80vh;padding:72px 0 40px
+    *{box-sizing:border-box;}
+    body {
+      margin:0;
+      font-family:'Lato', sans-serif;
+      background:var(--sand);
+      color:var(--text);
+      line-height:1.6;
     }
-    @media (max-width:1000px){.hero{grid-template-columns:1fr;min-height:auto}}
-    .hero .eyebrow{letter-spacing:.12em;text-transform:uppercase;color:var(--green-600);font-weight:700;font-size:.9rem}
-    .hero p{font-size:clamp(1rem,2vw,1.125rem)}
-    .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px}
+    h1,h2,h3 {
+      font-family:'Montserrat', sans-serif;
+      color:var(--accent);
+      margin:0 0 .4em;
+    }
+    h1{font-size:clamp(2rem,4vw,3rem);}
+    h2{font-size:clamp(1.4rem,3vw,2rem);}
+    p{margin:0 0 1em;}
+    a{text-decoration:none;}
 
-    /* Buttons */
+    header {
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:90vh;
+      color:var(--white);
+      text-align:center;
+      background:url("Whisk_f78b690aabbea87a9394b679a76ebb74eg.png") center/cover no-repeat;
+    }
+    header::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,.45) 0%, rgba(0,0,0,.05) 70%);
+    }
+    .hero-text{
+      position:relative;
+      z-index:2;
+      max-width:800px;
+      padding:0 1rem;
+    }
+    .hero-text h1{color:var(--white);}
+    .hero-text p{
+      color:var(--white);
+      font-size:1.1rem;
+    }
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:14px 20px;border-radius:999px;font-weight:700;transition:.2s;
-      box-shadow:0 1px 0 rgba(0,0,0,.04)
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:50px;
+      font-weight:700;
+      transition:all .2s ease;
+      margin:6px;
     }
-    .btn-order{background:var(--gold-500);color:#fff}
-    .btn-order:hover{filter:brightness(.95)}
-    .btn-med{background:var(--green-900);color:#fff}
-    .btn-med:hover{filter:brightness(1.05)}
-
-    /* Cards */
+    .btn-gold{background:var(--gold);color:#fff;}
+    .btn-gold:hover{background:#c7a558;}
+    .btn-accent{background:var(--accent);color:#fff;}
+    .btn-accent:hover{background:#a36d36;}
+    section{padding:70px 20px;}
+    .container{max-width:1000px;margin:auto;}
+    .grid-3{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
     .card{
-      background:#fff;border:1px solid #e9ecea;border-radius:16px;
-      padding:22px;box-shadow:0 4px 14px rgba(0,0,0,.04)
+      background:var(--white);
+      border-radius:14px;
+      padding:24px;
+      box-shadow:0 4px 12px rgba(0,0,0,.06);
     }
-    .card h3{margin-bottom:.25rem}
-    .tag{display:inline-block;background:#e9f3ee;color:var(--green-900);padding:6px 10px;border-radius:999px;font-weight:700;font-size:.8rem}
-
-    /* CTA band */
-    .cta-band{
-      background:var(--green-900);color:#fff;border-radius:20px;padding:28px;display:grid;gap:16px;align-items:center;
-      grid-template-columns:1fr auto
+    .cta{
+      text-align:center;
+      background:var(--accent);
+      color:#fff;
+      border-radius:16px;
+      padding:50px 20px;
     }
-    .cta-band h2{color:#fff;margin:0}
-    .cta-actions{display:flex;gap:12px;flex-wrap:wrap}
-    @media (max-width:900px){.cta-band{grid-template-columns:1fr}}
-
-    /* Footer */
-    footer{padding:28px 0;color:#5f6b65;font-size:.95rem}
-    footer a{color:#e8f5ef;text-decoration:underline}
-    .footer-inner{
-      background:var(--green-900);color:#dfe9e4;border-radius:16px;padding:22px
+    footer{
+      background:#bda07b;
+      color:#fff;
+      text-align:center;
+      padding:25px 15px;
+      font-size:.95rem;
     }
-    .phones{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px}
-    .phones span{display:inline-flex;gap:8px;align-items:center}
-    .legal{font-size:.85rem;margin-top:10px;opacity:.9}
-    .logo{font-weight:800;letter-spacing:.02em}
-    .tiny{font-size:.85rem;color:#cfe1d8}
+    footer a{color:#fff;text-decoration:underline;}
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
-  <header class="container hero">
+<header>
+  <div class="hero-text">
+    <h1>La Revolución de la Megadosis – Vitamina D3</h1>
+    <p>Tu piel también necesita sol por dentro ☀️<br>
+    Descubre cómo la Vitamina D3 apoya la belleza, la vitalidad y el bienestar desde el interior.</p>
     <div>
-      <div class="eyebrow">Vitamina D3</div>
-      <h1>La Revolución de la Megadosis</h1>
-      <p>Una toma al mes × 3 para mantener tu <strong>piel</strong>, tu <strong>energía</strong> y tu <strong>bienestar</strong> en equilibrio. Contenido educativo y acompañamiento profesional.</p>
-      <div class="hero-cta">
-        <!-- CTA ORDENAR AHORA -->
-        <a class="btn btn-order" href="https://wa.me/593979011200?text=Hola!%20Quiero%20ordenar%20Digeros%20Forte%20120.000UI" target="_blank" rel="noopener">Ordenar ahora</a>
-        <!-- CTA CONSULTA MÉDICA (WHATSAPP CON MENSAJE PRELLENADO) -->
-        <a class="btn btn-med" href="https://wa.me/593979011200?text=Hola!%20Deseo%20una%20consulta%20virtual%20gratuita%20sobre%20la%20Vitamina%20D3" target="_blank" rel="noopener">Consulta virtual gratuita con un médico</a>
-      </div>
+      <a class="btn btn-gold" href="https://wa.me/593979011200?text=Hola!%20Quiero%20ordenar%20Digeros%20Forte%20120.000UI" target="_blank">Ordenar ahora</a>
+      <a class="btn btn-accent" href="https://wa.me/593979011200?text=Hola!%20Deseo%20una%20consulta%20virtual%20gratuita%20sobre%20la%20Vitamina%20D3" target="_blank">Consulta gratuita con un médico</a>
     </div>
-    <div>
-      <!-- Imagen hero libre de derechos (puedes reemplazar la URL por otra de Unsplash/Pexels) -->
-      <img src="https://images.unsplash.com/photo-1612872087720-bb8762f2f6cd?q=80&w=1600&auto=format&fit=crop"
-           alt="Mujer con piel luminosa mirando a la luz, estética clínica premium" style="border-radius:16px;">
-    </div>
-  </header>
+  </div>
+</header>
 
-  <!-- ¿POR QUÉ LA DOSIS SÍ IMPORTA? -->
-  <section class="section muted">
-    <div class="container">
-      <h2>¿Por qué <em>la dosis</em> sí importa?</h2>
-      <p>Más del <strong>70 %</strong> de las personas tiene niveles bajos de Vitamina D3 sin saberlo. La dosis adecuada ayuda a mantener la función celular, la energía y la vitalidad de la piel. Porque la dosis sí importa.</p>
-      <div class="card" style="margin-top:14px;display:grid;gap:16px;grid-template-columns:120px 1fr;align-items:center">
-        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=600&auto=format&fit=crop" alt="Calibración y niveles, gráfico minimal" style="border-radius:12px;">
-        <div>
-          <div class="tag">Niveles orientativos</div>
-          <p style="margin:.5rem 0 0"><strong>20 – 30 – 50 ng/mL</strong> · Mantener niveles adecuados favorece el equilibrio del organismo. Consulta siempre con un profesional de salud.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section>
+  <div class="container">
+    <h2>La vitamina que ilumina tu piel</h2>
+    <p>La <strong>Vitamina D3</strong> no solo es esencial para la salud interna, sino que también influye en la apariencia de tu piel. 
+    Niveles adecuados ayudan a mantener la barrera cutánea, la elasticidad y el brillo natural.  
+    El 70% de la población presenta bajos niveles de esta vitamina sin saberlo.</p>
+    <p><strong>Una toma al mes × 3</strong> es un protocolo simple que contribuye a restablecer ese equilibrio.  
+    No se trata de magia, sino de constancia.</p>
+  </div>
+</section>
 
-  <!-- VITAMINA D3 Y LA PIEL -->
-  <section class="section">
-    <div class="container">
-      <div style="display:grid;gap:24px;grid-template-columns:1fr 1.2fr;align-items:center">
-        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" alt="Textura de piel saludable, macro" style="border-radius:16px;">
-        <div>
-          <h2>Vitamina D3 y la piel</h2>
-          <p>La Vitamina D3 interviene en procesos que apoyan la renovación y la barrera cutánea. Cuando falta la luz exterior, recordarle a tu cuerpo que también puede recibir <strong>sol por dentro</strong> es la clave del equilibrio.</p>
-          <p><strong>Piel fuerte, luminosa y en armonía.</strong></p>
-        </div>
-      </div>
+<section style="background:var(--white)">
+  <div class="container grid-3">
+    <div class="card">
+      <h3>🌞 Energía radiante</h3>
+      <p>Sentirte bien por dentro también se refleja por fuera. La vitamina D3 apoya la vitalidad que tu piel proyecta.</p>
     </div>
-  </section>
-
-  <!-- PROTOCOLO SIMPLE -->
-  <section class="section muted">
-    <div class="container">
-      <h2>Protocolo simple</h2>
-      <div class="grid-3" style="margin-top:12px">
-        <div class="card">
-          <h3>1</h3>
-          <p>Una toma mensual</p>
-        </div>
-        <div class="card">
-          <h3>2</h3>
-          <p>Acompañamiento y recordatorios</p>
-        </div>
-        <div class="card">
-          <h3>3</h3>
-          <p>En 3 meses completas tu plan</p>
-        </div>
-      </div>
-      <p style="margin-top:12px">Simple, claro y fácil de seguir.</p>
+    <div class="card">
+      <h3>💛 Belleza desde el interior</h3>
+      <p>Contribuye al bienestar de las células cutáneas, promoviendo una piel más firme y luminosa.</p>
     </div>
-  </section>
-
-  <!-- BENEFICIOS DESTACADOS -->
-  <section class="section">
-    <div class="container">
-      <h2>Beneficios destacados</h2>
-      <div class="grid-3" style="margin-top:12px">
-        <div class="card">
-          <h3>🌞 Energía y ánimo</h3>
-          <p>Apoya tu vitalidad cotidiana con hábitos y niveles adecuados.</p>
-        </div>
-        <div class="card">
-          <h3>💛 Piel saludable y vital</h3>
-          <p>Bienestar cutáneo y cuidado de la barrera de la piel.</p>
-        </div>
-        <div class="card">
-          <h3>💪 Soporte muscular y óseo</h3>
-          <p>Parte de un estilo de vida activo y equilibrado.</p>
-        </div>
-      </div>
+    <div class="card">
+      <h3>🌿 Equilibrio natural</h3>
+      <p>Apoya el bienestar general y la armonía corporal que toda rutina de belleza necesita.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA FINAL -->
-  <section class="section">
-    <div class="container cta-band">
-      <div>
-        <h2>Tu piel también necesita sol por dentro.</h2>
-        <p style="margin:.2rem 0 0">Habla con nosotros ahora o agenda tu consulta gratuita.</p>
-      </div>
-      <div class="cta-actions">
-        <a class="btn btn-order" href="https://wa.me/593979011200?text=Hola!%20Quiero%20ordenar%20Digeros%20Forte%20120.000UI" target="_blank" rel="noopener">Ordenar ahora</a>
-        <a class="btn btn-med" href="https://wa.me/593979011200?text=Hola!%20Deseo%20una%20consulta%20virtual%20gratuita%20sobre%20la%20Vitamina%20D3" target="_blank" rel="noopener">Consulta virtual con un médico</a>
-      </div>
-    </div>
-  </section>
+<section class="cta">
+  <h2>¿Lista para tu dosis de sol interior?</h2>
+  <p>Te acompañamos paso a paso con orientación médica gratuita y atención personalizada por WhatsApp.</p>
+  <a class="btn btn-gold" href="https://wa.me/593979011200?text=Hola!%20Quiero%20ordenar%20Digeros%20Forte%20120.000UI" target="_blank">Ordenar ahora</a>
+  <a class="btn btn-accent" href="https://wa.me/593979011200?text=Hola!%20Deseo%20una%20consulta%20virtual%20gratuita%20sobre%20la%20Vitamina%20D3" target="_blank">Consulta gratuita con un médico</a>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-inner">
-      <div class="logo">Digeros Forte</div>
-      <div class="phones">
-        <span>📞 1800 39 23 22</span>
-        <span>☎️ *1010</span>
-        <span>📱 +593 96 822 3333</span>
-        <span>💬 <a href="https://wa.me/593979011200" target="_blank" rel="noopener" class="tiny">WhatsApp 593979011200</a></span>
-      </div>
-      <div class="legal">Contenido educativo. No sustituye la consulta médica. Consulta siempre a tu profesional de salud.</div>
-      <div class="tiny" style="margin-top:6px;">© <span id="y"></span> Revolución de la Megadosis – Vitamina D3</div>
-    </div>
-  </footer>
+<footer>
+  <p><strong>Digeros Forte</strong> · Revolución de la Megadosis – Vitamina D3</p>
+  <p>📞 1800 39 23 22 | *1010 | 📱 +593 96 822 3333 | 💬 
+    <a href="https://wa.me/593979011200" target="_blank">WhatsApp 593979011200</a></p>
+  <p>Contenido educativo. No sustituye la consulta médica. Consulta siempre a tu profesional de salud.</p>
+</footer>
 
-  <script>
-    // Año dinámico
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
