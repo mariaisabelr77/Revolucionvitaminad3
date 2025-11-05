@@ -9,36 +9,45 @@
 
   <style>
     :root{
-      --gold:#d6b46a;
-      --sand:#f9f6f2;
-      --text:#333;
-      --accent:#b78246;
-      --white:#fff;
-      --shadow:0 4px 12px rgba(0,0,0,.08);
+      --gold:#F4C542;        /* amarillo dorado */
+      --orange:#F28C28;      /* naranja melocotón */
+      --brown:#8B5E3C;       /* café cálido */
+      --black:#1C1C1C;       /* negro */
+      --white:#FFFFFF;       /* blanco */
+      --sand:#FFF9F2;        /* fondo cálido crema */
+      --shadow:0 4px 10px rgba(0,0,0,.08);
     }
     *{box-sizing:border-box;}
-    body{margin:0;font-family:'Lato',sans-serif;background:var(--sand);color:var(--text);line-height:1.6;}
-    h1,h2,h3{font-family:'Montserrat',sans-serif;color:var(--accent);margin:0 0 .5em;}
+    body{
+      margin:0;
+      font-family:'Lato',sans-serif;
+      background:var(--sand);
+      color:var(--black);
+      line-height:1.6;
+    }
+    h1,h2,h3{
+      font-family:'Montserrat',sans-serif;
+      color:var(--brown);
+      margin:0 0 .5em;
+    }
     h1{font-size:clamp(2rem,4vw,3rem);}
     h2{font-size:clamp(1.5rem,3vw,2rem);}
     p{margin:0 0 1em;}
     a{text-decoration:none;}
+
+    /* Header */
     header{
-      position:relative;
-      height:90vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      background:linear-gradient(120deg,var(--gold),var(--orange));
+      color:var(--white);
       text-align:center;
-      background:url('https://images.unsplash.com/photo-1599305445671-ac291c94e966?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-      color:#fff;
+      padding:100px 20px 120px;
+      border-bottom:8px solid var(--brown);
     }
-    header::after{
-      content:'';
-      position:absolute;inset:0;
-      background:linear-gradient(to top,rgba(0,0,0,.45) 0%,rgba(0,0,0,.15) 70%);
-    }
-    .hero-text{position:relative;z-index:2;max-width:800px;padding:0 1rem;}
+    .hero-text{max-width:800px;margin:auto;}
+    .hero-text h1{color:var(--white);}
+    .hero-text p{color:var(--white);font-size:1.1rem;}
+
+    /* Buttons */
     .btn{
       display:inline-block;
       padding:12px 22px;
@@ -46,35 +55,47 @@
       font-weight:700;
       transition:all .2s;
       margin:6px;
+      box-shadow:var(--shadow);
     }
-    .btn-gold{background:var(--gold);color:#fff;}
-    .btn-gold:hover{background:#c3a559;}
-    .btn-accent{background:var(--accent);color:#fff;}
-    .btn-accent:hover{background:#a6733b;}
+    .btn-gold{background:var(--gold);color:var(--black);}
+    .btn-gold:hover{background:#e5b93d;}
+    .btn-orange{background:var(--orange);color:var(--white);}
+    .btn-orange:hover{background:#e47e1f;}
+
+    /* Sections */
     section{padding:70px 20px;}
     .container{max-width:1000px;margin:auto;}
-    .grid-3{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+    .grid-3{
+      display:grid;
+      gap:1.5rem;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    }
     .card{
       background:var(--white);
       border-radius:14px;
       padding:24px;
       box-shadow:var(--shadow);
+      border-top:6px solid var(--gold);
     }
+
+    /* CTA */
     .cta{
       text-align:center;
-      background:var(--accent);
+      background:linear-gradient(135deg,var(--orange),var(--brown));
       color:#fff;
       border-radius:16px;
-      padding:60px 20px;
+      padding:70px 20px;
     }
+
+    /* Footer */
     footer{
-      background:#b79c6d;
-      color:#fff;
+      background:var(--brown);
+      color:var(--white);
       text-align:center;
       padding:25px 15px;
       font-size:.95rem;
     }
-    footer a{color:#fff;text-decoration:underline;}
+    footer a{color:var(--gold);text-decoration:underline;}
   </style>
 </head>
 <body>
@@ -86,7 +107,7 @@
     Conoce cómo la Vitamina D3 potencia tu belleza natural, energía y bienestar.</p>
     <div>
       <a class="btn btn-gold" href="https://wa.me/593979011200?text=Hola!%20Quiero%20ordenar%20Digeros%20Forte%20120.000UI" target="_blank">Ordenar ahora</a>
-      <a class="btn btn-accent" href="https://wa.me/593979011200?text=Hola!%20Deseo%20una%20consulta%20virtual%20gratuita%20sobre%20la%20Vitamina%20D3" target="_blank">Quiero mi consulta virtual gratuita</a>
+      <a class="btn btn-orange" href="https://wa.me/593979011200?text=Hola!%20Deseo%20una%20consulta%20virtual%20gratuita%20sobre%20la%20Vitamina%20D3" target="_blank">Consulta virtual gratuita</a>
     </div>
   </div>
 </header>
@@ -94,66 +115,55 @@
 <section>
   <div class="container">
     <h2>El papel de la Vitamina D3 en la piel y la belleza</h2>
-    <img src="https://images.unsplash.com/photo-1600185365220-3c62a0cf0c02?q=80&w=1200&auto=format&fit=crop"
-         alt="Textura de piel luminosa con luz natural"
-         style="border-radius:16px; width:100%; margin-bottom:25px;">
-    <p>La <strong>Vitamina D3</strong> es una aliada esencial en la salud y belleza de la piel. No solo ayuda a mantener niveles óptimos de hidratación y elasticidad, sino que también estimula la renovación celular, fortalece la barrera cutánea y protege contra los signos del envejecimiento.</p>
-    <p>Su acción antioxidante y antiinflamatoria contribuye a calmar la piel, equilibrar la pigmentación y reforzar su defensa natural frente al sol y los radicales libres.</p>
+    <p>La <strong>Vitamina D3</strong> es una aliada esencial en la salud y belleza de la piel. 
+    Favorece la hidratación, la elasticidad y la renovación celular, fortaleciendo la barrera cutánea y ayudando a mantener una apariencia luminosa y equilibrada.</p>
+    <p>Su acción antioxidante y antiinflamatoria contribuye a calmar la piel, equilibrar la pigmentación y proteger contra los signos del envejecimiento. 
+    En la Revolución de la Megadosis, creemos que la verdadera belleza empieza en el interior.</p>
   </div>
 </section>
 
-<section style="background:#fff;">
+<section style="background:var(--white);">
   <div class="container">
     <h2>Beneficios de la Vitamina D3 para la piel</h2>
-    <img src="https://images.unsplash.com/photo-1588514727390-91fd5ebaef3d?q=80&w=1600&auto=format&fit=crop"
-         alt="Piel saludable y luminosa"
-         style="border-radius:16px; width:100%; margin-bottom:30px;">
     <div class="grid-3">
       <div class="card">
         <h3>💧 Hidratación profunda</h3>
-        <p>Mejora la retención de humedad, manteniendo la piel suave, flexible y protegida frente a la resequedad ambiental.</p>
+        <p>Mejora la retención de humedad, manteniendo la piel suave, flexible y protegida.</p>
       </div>
       <div class="card">
         <h3>✨ Elasticidad y firmeza</h3>
-        <p>Favorece la producción de colágeno y elastina, contribuyendo a una piel más firme y con apariencia rejuvenecida.</p>
+        <p>Estimula la producción de colágeno y elastina para una piel más firme y rejuvenecida.</p>
       </div>
       <div class="card">
         <h3>🌿 Propiedades antiinflamatorias</h3>
-        <p>Ayuda a calmar la irritación y reducir los brotes en pieles con acné, psoriasis o eccema, favoreciendo un aspecto uniforme.</p>
+        <p>Ayuda a calmar la irritación y reducir brotes de acné, psoriasis o eccema.</p>
       </div>
     </div>
 
     <div class="grid-3" style="margin-top:20px;">
       <div class="card">
         <h3>🌸 Regula la pigmentación</h3>
-        <p>Equilibra la producción de melanina, ayudando a un tono de piel más parejo y luminoso.</p>
+        <p>Equilibra la melanina, promoviendo un tono de piel uniforme y luminoso.</p>
       </div>
       <div class="card">
         <h3>🔁 Renovación celular</h3>
-        <p>Contribuye a la regeneración y reparación de tejidos, manteniendo la piel saludable y revitalizada.</p>
+        <p>Favorece la regeneración y reparación de los tejidos, revitalizando tu piel.</p>
       </div>
       <div class="card">
         <h3>☀️ Protección frente al daño solar</h3>
-        <p>Refuerza las defensas antioxidantes y fortalece la barrera cutánea ante los efectos del sol y la contaminación.</p>
+        <p>Refuerza la barrera cutánea ante los efectos del sol y la contaminación.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="cta">
-  <img src="https://images.unsplash.com/photo-1602872028029-cfe31c9f3cd0?q=80&w=1600&auto=format&fit=crop"
-       alt="Mujer disfrutando del sol con expresión relajada"
-       style="border-radius:16px; width:100%; margin-bottom:25px;">
   <h2>Tu piel también necesita sol por dentro</h2>
-  <p>Descubre el protocolo simple de la Revolución de la Megadosis: 1 toma al mes × 3 meses.<br>
+  <p>Descubre el protocolo simple de la Revolución de la Megadosis: una toma al mes × 3 meses.<br>
   Te acompañamos con orientación médica gratuita y atención personalizada por WhatsApp.</p>
   <a class="btn btn-gold" href="https://wa.me/593979011200?text=Hola!%20Quiero%20ordenar%20Digeros%20Forte%20120.000UI" target="_blank">Ordenar ahora</a>
-  <a class="btn btn-accent" href="https://wa.me/593979011200?text=Hola!%20Deseo%20una%20consulta%20virtual%20gratuita%20sobre%20la%20Vitamina%20D3" target="_blank">Consulta con un médico</a>
+  <a class="btn btn-orange" href="https://wa.me/593979011200?text=Hola!%20Deseo%20una%20consulta%20virtual%20gratuita%20sobre%20la%20Vitamina%20D3" target="_blank">Consulta médica gratuita</a>
 </section>
-
-<img src="https://images.unsplash.com/photo-1604335399106-46b8b7a7dbb2?q=80&w=1600&auto=format&fit=crop"
-     alt="Detalle de piel luminosa con luz dorada"
-     style="width:100%; object-fit:cover; max-height:400px; display:block;">
 
 <footer>
   <p><strong>Digeros Forte</strong> · Revolución de la Megadosis – Vitamina D3</p>
